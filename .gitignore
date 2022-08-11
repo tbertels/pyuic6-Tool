@@ -198,7 +198,7 @@ dmypy.json
 /src/setup.py
 /src/dist
 /src/build
-/src/pyuic5_tool.egg-info
+/src/pyuic6_tool.egg-info
 .idea
 Pipfile
 Pipfile.lock
