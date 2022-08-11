@@ -10,8 +10,6 @@ Python script to automate call of pyuic6
 * Add an empty __init__.py file inside /ui/converted
 * Put the two files in /src of this repository in the /ui/tool folder of you project
 
-All .ui files will be automatically converted if they have been modified.
-
 ### Using the ui elements
 
 You can then import the ui elements needed with
@@ -26,6 +24,12 @@ self._ui.setupUi(self)
 to ``def __init__``
 
 The ui elements will then be accessible from ``self._ui``.
+
+## Benefits
+* All .ui files will be automatically converted only if they have been modified.
+* Using pyuic6 instead of uic.loadUi:
+* * makes code completion available for interface elements
+* * ensures a faster interface
 
 ## Known issues
 Your project has to be run twice for the .ui files changes to be taken into account.
