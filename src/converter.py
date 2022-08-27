@@ -75,7 +75,7 @@ class Converter:
         :return: None
         """
         try:
-            if os.path.getmtime(self.ui_directory + "\\" + file) > os.path.getmtime(self.py_directory + "\\" + file[:-3] + ".py"):
+            if  not os.path.isfile(self.py_directory + "\\" + file[:-3] + ".py") or os.path.getmtime(self.ui_directory + "\\" + file) > os.path.getmtime(self.py_directory + "\\" + file[:-3] + ".py"):
                 absolute_uifile_path = f'"{self.ui_directory}\\{file}"'
                 absolute_pyfile_path = f'"{self.py_directory}\\{file[:-3] + ".py"}"'
                 print(f'pyuic6 {absolute_uifile_path} -o {absolute_pyfile_path}')
